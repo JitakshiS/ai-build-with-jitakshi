@@ -258,6 +258,18 @@
 })();
 
 
+/* ---------- Floating CTA visibility ---------- */
+(function floatCta() {
+  const el = document.getElementById('float-cta');
+  if (!el) return;
+  function check() {
+    el.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.6);
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  check();
+})();
+
+
 /* ---------- Time in nav ---------- */
 (function clock() {
   const el = document.getElementById('nav-time');

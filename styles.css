@@ -757,8 +757,11 @@ section {
   font-size: 14px; line-height: 1.45;
 }
 .tier-list li::before {
-  content: ""; width: 8px; height: 8px; background: var(--accent); border-radius: 50%;
+  content: ""; width: 8px; height: 8px; background: var(--rose); border-radius: 50%;
   margin-top: 7px; flex-shrink: 0;
+}
+.tier-card.featured .tier-list li::before {
+  background: var(--accent);
 }
 .tier-list li strong { font-weight: 600; }
 
@@ -839,8 +842,8 @@ section {
 }
 .use-card {
   padding: 28px;
-  background: rgba(246,244,238,0.04);
-  border: 1px solid rgba(246,244,238,0.1);
+  background: rgba(246,244,238,0.08);
+  border: 1px solid rgba(246,244,238,0.18);
   border-radius: 14px;
   display: flex;
   flex-direction: column;
@@ -863,7 +866,7 @@ section {
   text-wrap: balance;
 }
 .use-card .desc {
-  font-size: 13px; line-height: 1.5; color: rgba(246,244,238,0.65);
+  font-size: 13px; line-height: 1.5; color: rgba(246,244,238,0.75);
   margin-top: auto;
 }
 .use-card .stack {
@@ -1300,6 +1303,58 @@ section.who {
   --accent: #00e5ff;
   --accent-deep: #00b8cc;
 }
+
+/* ============ FLOATING CTA ============ */
+.float-cta {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+.float-cta.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.float-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 24px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 100px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  transition: background 0.2s, transform 0.2s;
+}
+.float-cta-btn:hover {
+  background: var(--rose);
+  color: var(--plum);
+  transform: translateY(-2px);
+}
+.float-cta-link {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-decoration: none;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+.float-cta-link:hover { color: var(--ink); }
 
 /* ============ SCROLL REVEALS & STORYTELLING ============ */
 
