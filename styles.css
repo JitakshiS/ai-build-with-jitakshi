@@ -132,9 +132,11 @@ main { position: relative; z-index: 1; }
 
 .hero-stage {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 48px;
+  align-content: center;
   padding: 0;
   max-width: var(--max);
   margin: 0 auto;
@@ -142,6 +144,7 @@ main { position: relative; z-index: 1; }
 }
 
 .hero-eyebrow {
+  grid-column: 1 / -1;
   font-family: var(--f-mono);
   font-size: 12px;
   letter-spacing: 0.2em;
@@ -212,6 +215,7 @@ main { position: relative; z-index: 1; }
 }
 
 .hero-bottom {
+  grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -244,12 +248,15 @@ main { position: relative; z-index: 1; }
 .hero-sub strong { font-weight: 600; background: linear-gradient(180deg, transparent 60%, var(--accent) 60%); padding: 0 2px; }
 
 .hero-onesub {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: end;
   font-family: var(--f-sans);
   font-size: clamp(18px, 1.6vw, 22px);
   line-height: 1.45;
   color: var(--ink-soft);
-  max-width: 480px;
-  margin: 20px 0 0 auto;
+  margin: 0;
+  padding-bottom: 8px;
   font-weight: 400;
 }
 .hero-onesub strong {
@@ -1293,7 +1300,9 @@ section {
 /* ============ RESPONSIVE ============ */
 @media (max-width: 980px) {
   .topnav nav { display: none; }
-  .hero-bottom { grid-template-columns: 1fr; gap: 32px; }
+  .hero-stage { grid-template-columns: 1fr; }
+  .hero-onesub { grid-column: 1; grid-row: auto; align-self: start; margin-top: 16px; }
+  .hero-bottom { grid-column: 1; grid-template-columns: 1fr; gap: 32px; }
   .day-intro, .scene, .scene.flip, .who-grid, .women-grid, .tiers-head { grid-template-columns: 1fr; gap: 32px; }
   .scene.flip .scene-text, .scene.flip .scene-visual { order: initial; }
   .tier-grid, .proof-grid, .use-grid, .women-stats { grid-template-columns: 1fr; }
