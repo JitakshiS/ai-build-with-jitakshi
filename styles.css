@@ -99,7 +99,7 @@ main { position: relative; z-index: 1; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 90px var(--pad-x) 40px;
+  padding: 80px var(--pad-x) 24px;
   overflow: hidden;
   background:
     radial-gradient(ellipse 60% 40% at 50% 100%, rgba(255, 91, 138, 0.12), transparent 70%),
@@ -111,7 +111,7 @@ main { position: relative; z-index: 1; }
   height: 1px; background: var(--rule);
 }
 .hero-rule-top { top: 64px; }
-.hero-rule-bot { bottom: 40px; }
+.hero-rule-bot { bottom: 32px; }
 
 .hero-meta {
   display: flex;
@@ -135,7 +135,7 @@ main { position: relative; z-index: 1; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px 0;
+  padding: 0;
   max-width: var(--max);
   margin: 0 auto;
   width: 100%;
@@ -150,7 +150,7 @@ main { position: relative; z-index: 1; }
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   padding: 8px 14px;
   background: var(--rose-soft);
   border-radius: 100px;
@@ -161,8 +161,8 @@ main { position: relative; z-index: 1; }
 .hero-headline {
   font-family: var(--f-display);
   font-weight: 500;
-  font-size: clamp(44px, 6.5vw, 104px);
-  line-height: 0.96;
+  font-size: clamp(48px, 7vw, 112px);
+  line-height: 0.95;
   letter-spacing: -0.035em;
   margin: 0;
   text-wrap: balance;
@@ -216,7 +216,7 @@ main { position: relative; z-index: 1; }
   justify-content: space-between;
   align-items: end;
   gap: 48px;
-  padding-top: 36px;
+  padding-top: 24px;
   flex-wrap: wrap;
 }
 .hero-stat {
@@ -310,7 +310,7 @@ main { position: relative; z-index: 1; }
 
 .scroll-cue {
   position: absolute;
-  bottom: 24px; left: 50%;
+  bottom: 10px; left: 50%;
   transform: translateX(-50%);
   font-family: var(--f-mono);
   font-size: 10px;
