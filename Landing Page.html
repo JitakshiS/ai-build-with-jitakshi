@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Build with AI — Jitakshi Sharma</title>
+<meta name="description" content="Hands-on AI cohorts for corporate teams. Your team won't just learn about AI — they'll ship working tools by Friday." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<canvas id="ambient"></canvas>
+
+<!-- Tweaks defaults (editable on disk) -->
+<script>
+  window.__TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "accent": "lime",
+    "ambientIntensity": 0.75,
+    "headlineVariant": "cant-build",
+    "showWomenLed": true,
+    "showPricing": true
+  }/*EDITMODE-END*/;
+</script>
+
+<!-- TOP NAV -->
+<header class="topnav">
+  <div class="brand"><span class="pulse"></span>JITAKSHI / BUILD-WITH-AI</div>
+  <nav>
+    <a href="#journey">[01] Journey</a>
+    <a href="#formats">[02] Formats</a>
+    <a href="#use">[03] Use cases</a>
+    <a href="#women">[04] Women-led</a>
+    <a href="#proof">[05] Proof</a>
+    <a href="#cta">[06] Contact</a>
+  </nav>
+  <div class="right">
+    <span id="nav-time">--:--:-- UTC</span>
+    <span>· HALIFAX, NS</span>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-rule-top"></div>
+  <div class="hero-meta">
+    <div>// VOL.05 / FILE 001 / BUILD-WITH-AI · CORPORATE-COHORTS</div>
+    <div class="live">LIVE — TAKING Q3 BOOKINGS</div>
+  </div>
+
+  <div class="hero-stage">
+    <div class="hero-eyebrow"><span class="dot"></span> WOMEN-LED · BUILT FOR YOUR WHOLE TEAM</div>
+
+    <h1 class="hero-headline" id="hero-h">
+      <!-- filled by JS based on tweak -->
+    </h1>
+
+    <p class="hero-onesub">
+      Hands-on AI cohorts where your team <strong>ships working tools</strong> — by the end of the session.
+    </p>
+
+    <div class="hero-bottom">
+      <div class="hero-stat-block">
+        <span class="v">100<span class="plus">+</span></span>
+        <span class="label">people shipped real software in my rooms</span>
+      </div>
+      <a class="btn btn-lg" href="#cta">Book a discovery call <span class="arr">→</span></a>
+    </div>
+  </div>
+  <div class="hero-rule-bot"></div>
+  <div class="scroll-cue">Follow Maya from Monday to demo day</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Build with AI</span><span class="dot"></span>
+    <span class="ghost">Not just learn about it</span><span class="dot"></span>
+    <span>Build a culture</span><span class="dot"></span>
+    <span class="ghost">Not just a workshop</span><span class="dot"></span>
+    <span>Ship by Friday</span><span class="dot"></span>
+    <span class="ghost">Not by next quarter</span><span class="dot"></span>
+    <span>Build with AI</span><span class="dot"></span>
+    <span class="ghost">Not just learn about it</span><span class="dot"></span>
+    <span>Build a culture</span><span class="dot"></span>
+    <span class="ghost">Not just a workshop</span><span class="dot"></span>
+    <span>Ship by Friday</span><span class="dot"></span>
+    <span class="ghost">Not by next quarter</span><span class="dot"></span>
+  </div>
+</div>
+
+<!-- ============ DAY IN THE LIFE ============ -->
+<section class="day" id="journey">
+  <div class="wrap">
+    <div class="day-intro" data-reveal>
+      <div>
+        <div class="section-label">[ 01 / 06 ] · A Day In The Life</div>
+        <h2 class="h-display">Meet Maya.<br/>She's in <em>HR</em>.<br/>She's never written code.</h2>
+      </div>
+      <p class="lede">Monday, she's anxious about AI. Friday, she's demoing a tool she built — that her team uses on Monday. This is what one of my sessions feels like, scene by scene.</p>
+    </div>
+
+    <!-- SCENE 1: anxious / blank doc -->
+    <article class="scene">
+      <div class="scene-text">
+        <div class="scene-num">SCENE 01 <span class="time">// MON 09:14</span></div>
+        <h3 class="scene-h">Blank doc. Cursor blinking. <em>Dread.</em></h3>
+        <p class="scene-p">Her org sent the all-hands AI memo. Everyone's supposed to "use AI more." She's tried ChatGPT for emails. That's it. The slide deck calls it <em>AI fluency</em>. She has no idea what she's supposed to do with it.</p>
+        <div class="scene-quote">
+          "I felt like the youngest person in a room I wasn't invited to. AI was for engineers. Not for me."
+          <span class="who">— A real participant, before her first session</span>
+        </div>
+      </div>
+      <div class="scene-visual">
+        <div class="scene-blank">
+          <div class="anxiety">ANXIETY · HIGH</div>
+          <div class="doc">
+            <div class="doc-ttl">Untitled — How am I supposed to use AI?</div>
+            <span class="doc-cursor"></span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- SCENE 2: lovable -->
+    <article class="scene flip">
+      <div class="scene-text">
+        <div class="scene-num">SCENE 02 <span class="time">// MON 13:30 · session begins</span></div>
+        <h3 class="scene-h">She types one sentence. <em>Lovable</em> builds the app.</h3>
+        <p class="scene-p">In the first hour, every participant picks a real problem from their job. Then they describe it — in plain English — to Lovable. A working web app appears. No tutorial. No syntax. Just the thing they wanted.</p>
+        <div class="scene-quote">
+          "I built a vacation request tracker in 11 minutes. We've been promising IT we'd fix it for 18 months."
+          <span class="who">— Maya, end of day 1</span>
+        </div>
+      </div>
+      <div class="scene-visual">
+        <div class="fake-window lovable">
+          <div class="titlebar">
+            <span class="tdot"></span><span class="tdot"></span><span class="tdot"></span>
+            <span class="url"><span class="host">lovable.dev</span> / new-project</span>
+          </div>
+          <div class="body">
+            <div class="prompt">
+              <div class="label">// PROMPT</div>
+              <div class="typed"></div>
+            </div>
+            <div class="preview">
+              <div class="skel t"></div>
+              <div class="skel"></div>
+              <div class="skel s"></div>
+              <div class="skel"></div>
+              <div class="skel s"></div>
+              <div class="skel btn-fake">Submit →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- SCENE 3: claude code -->
+    <article class="scene">
+      <div class="scene-text">
+        <div class="scene-num">SCENE 03 <span class="time">// TUE 10:00 · day two</span></div>
+        <h3 class="scene-h">She opens a <em>terminal</em> for the first time. And it talks back.</h3>
+        <p class="scene-p">Day two is Claude Code. Sounds intimidating — but she's just having a conversation. She asks it to add email notifications. It writes the code, explains what it did, and asks if she wants it to deploy.</p>
+        <div class="scene-quote">
+          "I'm not pretending I'm an engineer. I'm directing one. Claude is the engineer."
+          <span class="who">— Real session feedback</span>
+        </div>
+      </div>
+      <div class="scene-visual">
+        <div class="terminal">
+          <span class="line"><span class="pr">$</span> claude</span>
+          <span class="line"><span class="cmt"># ⏵ Welcome back, Maya. What are we building?</span></span>
+          <span class="line">&gt; add email notifications when a request is approved</span>
+          <span class="line"><span class="cmt"># reading src/handlers/approve.ts...</span></span>
+          <span class="line"><span class="cmt"># adding sendmail integration via resend</span></span>
+          <span class="line"><span class="cmt"># writing tests/approve.test.ts</span></span>
+          <span class="line"><span class="ok">✓</span> 3 files changed · 47 lines added</span>
+          <span class="line"><span class="info">→</span> ready to deploy. continue? (y/n)</span>
+          <span class="line">&gt; y</span>
+          <span class="line"><span class="ok">✓</span> deployed to vercel · <span class="info">vacation-tracker.acme.app</span></span>
+        </span>
+        </div>
+      </div>
+    </article>
+
+    <!-- SCENE 4: deploy + demo -->
+    <article class="scene flip">
+      <div class="scene-text">
+        <div class="scene-num">SCENE 04 <span class="time">// FRI 16:00 · demo day</span></div>
+        <h3 class="scene-h">She <em>demos</em>. Out loud. To her team.</h3>
+        <p class="scene-p">The session ends with demos — because saying it out loud is what makes the skill stick. Maya walks her team through a tool that's already in production. Three colleagues ask if they can join the next cohort. That's how culture changes.</p>
+        <div class="scene-quote">
+          "This wasn't training. This was Maya showing us what's possible. Suddenly everyone wanted to try."
+          <span class="who">— Her director, Monday after</span>
+        </div>
+      </div>
+      <div class="scene-visual">
+        <div class="deploy">
+          <div class="row"><span class="check">✓</span><span class="name">Built tool</span><span class="url">vacation-tracker.acme.app</span></div>
+          <div class="row"><span class="check pending">○</span><span class="name">Deployed to production</span><span class="url">via Vercel</span></div>
+          <div class="row"><span class="check pending">○</span><span class="name">Onboarded team</span><span class="url">3 active users</span></div>
+          <div class="row"><span class="check pending">○</span><span class="name">Demo recorded</span><span class="url">shared internally</span></div>
+          <div class="demo-card">
+            "I built this. Want me to show you?"
+            <div class="sub">— Maya, Friday 4:12pm</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ TIERS / FORMATS ============ -->
+<section class="tiers" id="formats">
+  <div class="wrap">
+    <div class="tiers-head" data-reveal>
+      <div>
+        <div class="section-label">[ 02 / 06 ] · Three Formats</div>
+        <h2 class="h-display">Pick your <em>depth.</em></h2>
+      </div>
+      <p class="lede">A 2-hour spark, a full-day intensive, or a 4-week culture shift. Each format is designed for what you actually want to walk out with — not what looks good on a calendar invite.</p>
+    </div>
+
+    <div class="tier-grid">
+
+      <div class="tier-card">
+        <div class="tier-tag">SPARK</div>
+        <h3 class="tier-name">2 Hours</h3>
+        <div class="tier-price"><span>Starting at</span> <span class="from">— investment scales with team size</span></div>
+        <div class="tier-meta">10–40 participants</div>
+        <p class="tier-best">Best for: first exposure, team-wide kickoff, executive buy-in.</p>
+        <div class="tier-list-label">Your team learns</div>
+        <ul class="tier-list">
+          <li><strong>Lovable</strong> — build a working prototype from a text prompt</li>
+          <li>Live demo: an app built in real-time</li>
+          <li>Every participant builds their first project</li>
+          <li>The AI tool landscape and what's possible now</li>
+        </ul>
+        <div class="tier-outcome">Outcome: your team sees what's possible — and builds their first thing.</div>
+        <a class="tier-cta" href="#cta">Let's talk →</a>
+      </div>
+
+      <div class="tier-card featured">
+        <div class="tier-tag-mp">MOST POPULAR</div>
+        <div class="tier-tag">INTENSIVE</div>
+        <h3 class="tier-name">Full Day</h3>
+        <div class="tier-price"><span>≈ 10×</span> <span class="from">spark price</span></div>
+        <div class="tier-meta">10–30 participants</div>
+        <p class="tier-best">Best for: team upskilling, reducing the dev queue bottleneck.</p>
+        <div class="tier-list-label">Your team learns</div>
+        <ul class="tier-list">
+          <li><strong>Lovable</strong> — rapid prototyping and UI building</li>
+          <li><strong>Claude Code</strong> — building with AI in the terminal</li>
+          <li>Each participant builds and deploys a working tool</li>
+          <li>AI Builder Toolkit (guides, templates, prompts)</li>
+          <li>30-day post-session support</li>
+        </ul>
+        <div class="tier-outcome">Outcome: your team can build and deploy tools independently.</div>
+        <a class="tier-cta" href="#cta">Let's talk →</a>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-tag">TRANSFORMATION</div>
+        <h3 class="tier-name">4 Weeks</h3>
+        <div class="tier-price"><span>≈ 100×</span> <span class="from">spark price</span></div>
+        <div class="tier-meta">10–20 participants</div>
+        <p class="tier-best">Best for: building real internal tools, lasting team capability.</p>
+        <div class="tier-list-label">Your team learns</div>
+        <ul class="tier-list">
+          <li><strong>Lovable</strong>, <strong>Claude Code</strong>, <strong>AI Agents</strong></li>
+          <li>4 weekly sessions + office hours between</li>
+          <li>Build tools for real business use cases</li>
+          <li>1:1 support and code reviews</li>
+          <li>Deployment to production</li>
+          <li>Executive readout on team capabilities</li>
+        </ul>
+        <div class="tier-outcome">Outcome: production tools shipped — and lasting AI capability in your team.</div>
+        <a class="tier-cta" href="#cta">Let's talk →</a>
+      </div>
+
+    </div>
+
+    <div class="tier-foot">All formats include the AI Builder Toolkit · Discounts for non-profits and women-led teams</div>
+  </div>
+</section>
+
+<!-- ============ USE CASES ============ -->
+<section class="use" id="use">
+  <div class="wrap">
+    <div class="use-head" data-reveal>
+      <div class="section-label">[ 03 / 06 ] · Built In My Rooms</div>
+      <h2 class="h-display">For everyone — <span class="lime">not just engineers.</span></h2>
+      <p class="lede" style="color: rgba(246,244,238,0.7); margin-top: 28px;">Tools your team will actually build. Pick a department.</p>
+    </div>
+
+    <div class="use-tabs">
+      <button class="use-tab active" data-dept="HR">HR & People</button>
+      <button class="use-tab" data-dept="Finance">Finance</button>
+      <button class="use-tab" data-dept="Design">Design & Research</button>
+      <button class="use-tab" data-dept="Marketing">Marketing</button>
+      <button class="use-tab" data-dept="Operations">Operations</button>
+    </div>
+
+    <div class="use-grid" id="use-grid"></div>
+  </div>
+</section>
+
+<!-- ============ WOMEN-LED ============ -->
+<section class="women" id="women">
+  <div class="wrap">
+    <div class="women-grid">
+      <div data-reveal>
+        <div class="section-label">[ 04 / 06 ] · The Differentiator</div>
+        <h2 class="women-h">Women build louder<br/>in <span class="underline">all-women rooms.</span></h2>
+        <p class="women-lede">When the room is all-women, the women build. They ask questions out loud. They demo without apologizing. They pitch the messy ideas. I've run mixed rooms and women-only rooms — the difference isn't subtle. <strong>It's the entire reason I started doing this work.</strong></p>
+        <p class="women-lede" style="margin-top: 16px;">If your company is serious about women in AI, the path isn't another panel. It's a private cohort where they ship something real.</p>
+      </div>
+      <div class="women-photo">
+        <img src="images/volta-sprint-cohort.jpeg" alt="Volta Sprint Cohort" />
+        <div class="corner">COHORT 001<br/>VOLTA · 2025</div>
+      </div>
+    </div>
+
+    <div class="women-stats">
+      <div class="women-stat">
+        <div class="num">100+</div>
+        <div class="label">PEOPLE SHIPPED REAL SOFTWARE</div>
+      </div>
+      <div class="women-stat">
+        <div class="num">10</div>
+        <div class="label">SPRINT GRADUATES · ZERO CODE BACKGROUND</div>
+      </div>
+      <div class="women-stat">
+        <div class="num">100%</div>
+        <div class="label">DEPLOYED A WORKING APP</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO (Jitakshi) ============ -->
+<section class="who">
+  <div class="wrap">
+    <div class="section-label" style="justify-content: center; margin-bottom: 24px;">[ 05 / 06 ] · Who's running the room</div>
+    <h2 class="who-name-script">
+      <span class="tick-l">≋</span>Jitakshi<span class="tick-r">≋</span>
+    </h2>
+
+    <div class="who-grid">
+      <div class="who-side left">
+        <div class="who-anno tl">credentials</div>
+        <p><strong>Anthropic</strong> Claude Ambassador<br/>— Atlantic Canada</p>
+        <p style="margin-top:24px;"><strong>100+</strong> people<br/>shipped real software<br/>in my rooms</p>
+        <p style="margin-top:24px;"><strong>Previously:</strong><br/>Google · Meta · Netflix · Audi</p>
+      </div>
+
+      <div class="who-portrait" data-reveal>
+        <span class="tape"></span>
+        <img src="images/headshot.jpeg" alt="Jitakshi Sharma" />
+        <div class="id-hand">— Jitakshi —</div>
+      </div>
+
+      <div class="who-side right">
+        <div class="who-anno tr">what I actually do</div>
+        <p>I don't run<br/>workshops.</p>
+        <p style="margin-top:18px;">I build <strong>cultures</strong><br/>where your team<br/>keeps building<br/>after I leave.</p>
+        <p style="margin-top:24px; font-size:18px;">— that's the difference —</p>
+      </div>
+    </div>
+
+    <div class="who-meta-strip">
+      <div>
+        <span class="label">Partners</span>
+        <div class="v">Shopify · YWCA · Lovable · Volta · v0 · Claude Code</div>
+      </div>
+      <div style="text-align:center;">
+        <span class="label">Recent</span>
+        <div class="v"><em>Volta AI Sprint</em> — 10 women · 4 weeks · 10 deployed apps</div>
+      </div>
+      <div class="right-col">
+        <span class="label">Find me</span>
+        <div class="v">linkedin.com/in/<em>jitakshi</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS RAIL -->
+<section class="events">
+  <div class="wrap">
+    <div class="section-label">FIELD LOG · Inside the rooms</div>
+    <h2 class="h-display">From the cohorts.</h2>
+    <div class="events-rail">
+      <div class="event-card">
+        <img src="images/volta-sprint-cohort.jpeg" alt="" />
+        <div class="meta">
+          <div class="top"><span>// 001</span><span>VOLTA · HALIFAX</span></div>
+          <div class="ttl">Volta AI Sprint</div>
+          <div class="sub">10 women · 4 weeks · 10 deployed apps</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="images/event-claude-code.jpeg" alt="" />
+        <div class="meta">
+          <div class="top"><span>// 002</span><span>CLAUDE CODE</span></div>
+          <div class="ttl">Claude Code Masterclass</div>
+          <div class="sub">A full day · participants deployed real tools</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="images/event-v0-vercel.jpg" alt="" />
+        <div class="meta">
+          <div class="top"><span>// 003</span><span>VERCEL</span></div>
+          <div class="ttl">v0 by Vercel</div>
+          <div class="sub">Hands-on AI prototyping with the Vercel team</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="images/event-cursor-hack.jpeg" alt="" />
+        <div class="meta">
+          <div class="top"><span>// 004</span><span>CURSOR · HACK DAY</span></div>
+          <div class="ttl">Cursor Hack Day</div>
+          <div class="sub">Full day · shipped tools by close</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="images/event-women-founders.jpeg" alt="" />
+        <div class="meta">
+          <div class="top"><span>// 005</span><span>WOMEN FOUNDERS</span></div>
+          <div class="ttl">Women Founders Build Night</div>
+          <div class="sub">Zero coding background · full-stack output</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="images/event-claude-code-2.jpg" alt="" />
+        <div class="meta">
+          <div class="top"><span>// 006</span><span>CLAUDE CODE</span></div>
+          <div class="ttl">Building Agents Workshop</div>
+          <div class="sub">Practical agents — not just prompts</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos">
+  <div class="lab">8 YEARS · WITH THESE FOLKS</div>
+  <img src="images/company-logos-dark.png" alt="Trusted partners" />
+</section>
+
+<!-- ============ PROOF ============ -->
+<section class="proof" id="proof">
+  <div class="wrap">
+    <div data-reveal>
+      <div class="section-label">[ 06 / 06 ] · Transcripts</div>
+      <h2 class="h-display">Don't take my word.<br/><em>Take theirs.</em></h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card"><img src="images/li-3.png" alt="Yuhan Fu testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/li-4.png" alt="Primrose testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/li-1.png" alt="Natalie Mannion (Shopify) testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/li-2.png" alt="Thauana Morais testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/linkedin-caroline-vercel.png" alt="Caroline (Vercel) testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/linkedin-govind-talluri.png" alt="Govind Talluri testimonial on LinkedIn" /></div>
+    </div>
+    <div class="proof-foot">— pulled directly from LinkedIn · <a href="https://www.linkedin.com/in/jitakshi/" target="_blank" rel="noopener">see more on LinkedIn ↗</a> —</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee rose">
+  <div class="marquee-track">
+    <span>Workshops you forget</span><span class="dot"></span>
+    <span class="ghost">→ Cultures you keep</span><span class="dot"></span>
+    <span>Workshops you forget</span><span class="dot"></span>
+    <span class="ghost">→ Cultures you keep</span><span class="dot"></span>
+    <span>Workshops you forget</span><span class="dot"></span>
+    <span class="ghost">→ Cultures you keep</span><span class="dot"></span>
+    <span>Workshops you forget</span><span class="dot"></span>
+    <span class="ghost">→ Cultures you keep</span><span class="dot"></span>
+  </div>
+</div>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="cta">
+  <div class="wrap">
+    <div class="section-label">[ FINAL ] · Contact</div>
+    <h1 class="cta-h">Let's talk about<br/>your <em>team.</em></h1>
+    <p class="cta-sub">30 minutes. We figure out the right format, what your people would build, and whether this fits. No pitch — just a conversation.</p>
+    <div class="cta-btn-row">
+      <a class="btn btn-lg" href="https://cal.com/jitakshi/30min" target="_blank" rel="noopener">Book a discovery call <span class="arr">→</span></a>
+    </div>
+    <div class="cta-foot">
+      <div>creativej.me@gmail.com · ATLANTIC CANADA</div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/jitakshi/" target="_blank" rel="noopener">LINKEDIN ↗</a>
+        <a href="https://women-in-ai-jitakshi.vercel.app/" target="_blank" rel="noopener">COMMUNITY ↗</a>
+        <a href="https://cal.com/jitakshi/30min" target="_blank" rel="noopener">CAL.COM ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+  // Render hero headline based on tweak
+  function renderHero(variant) {
+    const el = document.getElementById('hero-h');
+    const variants = {
+      "cant-build": `
+        <span class="row"><span class="word" style="animation-delay:.1s">Your</span>&nbsp;<span class="word" style="animation-delay:.2s">team</span>&nbsp;<span class="word" style="animation-delay:.3s">did</span></span>
+        <span class="row"><span class="word" style="animation-delay:.4s">the</span>&nbsp;<span class="word" style="animation-delay:.5s"><em>AI training.</em></span></span>
+        <span class="row"><span class="word strike" style="animation-delay:.7s">Nothing&nbsp;changed</span></span>
+        <span class="row"><span class="word" style="animation-delay:.9s">on&nbsp;Monday.</span></span>
+      `,
+      "build-culture": `
+        <span class="row"><span class="word" style="animation-delay:.1s">I</span>&nbsp;<span class="word" style="animation-delay:.2s">don't</span>&nbsp;<span class="word" style="animation-delay:.3s">do</span></span>
+        <span class="row"><span class="word strike" style="animation-delay:.4s">workshops.</span></span>
+        <span class="row"><span class="word" style="animation-delay:.7s">I</span>&nbsp;<span class="word" style="animation-delay:.8s">build</span>&nbsp;<span class="word" style="animation-delay:.9s"><em>cultures.</em></span></span>
+      `,
+      "monday-friday": `
+        <span class="row"><span class="word" style="animation-delay:.1s">Monday</span>&nbsp;<span class="word" style="animation-delay:.3s">she</span>&nbsp;<span class="word" style="animation-delay:.4s">was</span>&nbsp;<span class="word" style="animation-delay:.5s">anxious.</span></span>
+        <span class="row"><span class="word" style="animation-delay:.7s">Friday</span>&nbsp;<span class="word" style="animation-delay:.8s">she</span>&nbsp;<span class="word" style="animation-delay:.9s"><em>shipped.</em></span></span>
+      `,
+    };
+    el.innerHTML = variants[variant] || variants["cant-build"];
+    // trigger rise animation only after injection + next frame paint
+    el.classList.remove('animate');
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => el.classList.add('animate'));
+    });
+    // safety fallback: force visible after 2.5s no matter what
+    setTimeout(() => {
+      el.querySelectorAll('.word').forEach(w => { w.style.transform = 'translateY(0)'; });
+    }, 2500);
+  }
+
+  // Apply tweaks to DOM
+  function applyTweaks(t) {
+    document.documentElement.dataset.accent = t.accent === 'lime' ? '' : t.accent;
+    if (window.__setAmbientIntensity) window.__setAmbientIntensity(t.ambientIntensity);
+    renderHero(t.headlineVariant);
+    document.getElementById('women').style.display = t.showWomenLed ? '' : 'none';
+    document.querySelectorAll('.tier-price').forEach(p => p.style.display = t.showPricing ? '' : 'none');
+  }
+
+  applyTweaks(window.__TWEAK_DEFAULTS);
+  window.__applyTweaks = applyTweaks;
+</script>
+
+<script src="app.js"></script>
+
+<!-- React + Tweaks panel -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks.jsx"></script>
+
+</body>
+</html>
