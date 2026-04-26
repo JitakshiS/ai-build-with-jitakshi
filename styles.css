@@ -958,7 +958,7 @@ section {
 }
 
 /* ============ WHO (Jitakshi) — polaroid + handwritten ============ */
-.who {
+section.who {
   padding: 160px var(--pad-x) 120px;
   background: var(--paper);
   position: relative;
