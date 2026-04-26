@@ -79,9 +79,17 @@
 })();
 
 
-/* ---------- Reveal on scroll ---------- */
+/* ---------- Reveal on scroll (comprehensive) ---------- */
 (function reveal() {
-  const els = document.querySelectorAll('[data-reveal]');
+  const selectors = [
+    '[data-reveal]',
+    '.scene',
+    '.tier-card',
+    '.proof-card',
+    '.event-card',
+    '.women-stat',
+  ];
+  const els = document.querySelectorAll(selectors.join(','));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -89,8 +97,24 @@
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12 });
   els.forEach(el => io.observe(el));
+})();
+
+
+/* ---------- Scroll-triggered key phrase highlights ---------- */
+(function scrollHighlights() {
+  const marks = document.querySelectorAll('mark.scroll-hl');
+  if (!marks.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('is-lit'), 300);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  marks.forEach(m => io.observe(m));
 })();
 
 
