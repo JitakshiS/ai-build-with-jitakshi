@@ -441,7 +441,7 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
-  padding: 80px 0;
+  padding: 56px 0;
   border-top: 1px solid rgba(246,244,238,0.1);
 }
 .scene:last-child { border-bottom: 1px solid rgba(246,244,238,0.1); }
@@ -473,23 +473,22 @@ section {
   max-width: 460px;
 }
 .scene-quote {
-  margin-top: 32px;
-  padding: 18px 22px;
+  margin-top: 24px;
+  padding: 0 0 0 16px;
   border-left: 2px solid var(--rose);
   font-family: var(--f-display);
   font-style: italic;
-  font-size: 19px;
-  line-height: 1.45;
-  color: var(--paper);
-  background: rgba(255, 91, 138, 0.06);
+  font-size: 17px;
+  line-height: 1.4;
+  color: rgba(246, 244, 238, 0.8);
 }
 .scene-quote .who {
   display: block;
-  margin-top: 10px;
+  margin-top: 6px;
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 11px;
   font-style: normal;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--rose);
   text-transform: uppercase;
 }
@@ -500,11 +499,12 @@ section {
 
 .scene-visual {
   position: relative;
-  aspect-ratio: 4/3;
+  aspect-ratio: 5/4;
   background: rgba(246, 244, 238, 0.03);
   border: 1px solid rgba(246, 244, 238, 0.1);
   border-radius: 14px;
   overflow: hidden;
+  align-self: start;
 }
 
 /* SCENE 1: blank doc */
