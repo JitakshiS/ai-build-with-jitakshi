@@ -439,8 +439,8 @@ section {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
+  gap: 40px 64px;
+  align-items: start;
   padding: 56px 0;
   border-top: 1px solid rgba(246,244,238,0.1);
 }
@@ -473,24 +473,28 @@ section {
   max-width: 460px;
 }
 .scene-quote {
-  margin-top: 24px;
-  padding: 0 0 0 16px;
-  border-left: 2px solid var(--rose);
+  grid-column: 1 / -1;
+  margin: 8px 0 0;
+  padding: 0;
+  border: none;
   font-family: var(--f-display);
   font-style: italic;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.4;
-  color: rgba(246, 244, 238, 0.8);
+  color: rgba(246, 244, 238, 0.5);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 .scene-quote .who {
-  display: block;
-  margin-top: 6px;
   font-family: var(--f-mono);
-  font-size: 11px;
+  font-size: 10px;
   font-style: normal;
   letter-spacing: 0.06em;
   color: var(--rose);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .scene.flip { grid-template-columns: 1fr 1fr; }
