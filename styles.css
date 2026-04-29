@@ -439,8 +439,7 @@ section {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 48px;
-  padding-top: 16px;
+  margin-bottom: 40px;
 }
 .story-cue-line {
   flex: 1;
