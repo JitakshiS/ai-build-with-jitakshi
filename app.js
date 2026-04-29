@@ -258,6 +258,34 @@
 })();
 
 
+/* ---------- Sticky scene counter ---------- */
+(function sceneProgress() {
+  const counter = document.getElementById('scene-progress');
+  const current = counter?.querySelector('.scene-progress-current');
+  if (!counter || !current) return;
+  const scenes = document.querySelectorAll('.scene');
+  const daySection = document.querySelector('.day');
+  if (!scenes.length || !daySection) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const idx = [...scenes].indexOf(e.target) + 1;
+        current.textContent = String(idx).padStart(2, '0');
+      }
+    });
+  }, { threshold: 0.3 });
+  scenes.forEach(s => io.observe(s));
+
+  const dayIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      counter.style.opacity = e.isIntersecting ? '1' : '0';
+    });
+  }, { threshold: 0.05 });
+  dayIo.observe(daySection);
+})();
+
+
 /* ---------- Floating CTA visibility ---------- */
 (function floatCta() {
   const el = document.getElementById('float-cta');
