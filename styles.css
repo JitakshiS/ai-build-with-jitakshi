@@ -171,7 +171,7 @@ main { position: relative; z-index: 1; }
   text-wrap: balance;
   color: var(--ink);
 }
-.hero-headline .row { display: block; overflow: hidden; }
+.hero-headline .row { display: block; overflow: hidden; padding-bottom: 0.1em; margin-bottom: -0.1em; }
 .hero-headline .word {
   display: inline-block;
   transform: translateY(0);
