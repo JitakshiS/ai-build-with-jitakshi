@@ -458,21 +458,6 @@ section {
   text-shadow: 0 0 20px rgba(200, 255, 0, 0.3);
 }
 
-/* Day intro: heavier blur, reveals after cue */
-.day-intro {
-  filter: blur(16px);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: filter 1.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-              opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1),
-              transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-  transition-delay: 0.4s;
-}
-.day-intro.is-in {
-  filter: blur(0);
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Sticky scene counter */
 .scene-progress {
@@ -1443,6 +1428,21 @@ section.who {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
+}
+
+.day-intro[data-reveal] {
+  filter: blur(16px);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: filter 1.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+              transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: 0.4s;
+}
+.day-intro[data-reveal].is-in {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .scene {
