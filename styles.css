@@ -817,14 +817,14 @@ section {
 
 .tier-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
 .tier-list li {
-  display: grid; grid-template-columns: 8px 1fr; gap: 10px; align-items: flex-start;
+  position: relative;
+  padding-left: 20px;
   font-size: 14px; line-height: 1.45;
 }
 .tier-list li::before {
-  content: ""; width: 8px; height: 8px; min-width: 8px; background: var(--rose); border-radius: 50%;
-  margin-top: 7px; flex-shrink: 0;
+  content: ""; width: 8px; height: 8px; background: var(--rose); border-radius: 50%;
+  position: absolute; left: 0; top: 7px;
 }
-.tier-list li strong { display: inline; }
 .tier-card.featured .tier-list li::before {
   background: var(--accent);
 }
