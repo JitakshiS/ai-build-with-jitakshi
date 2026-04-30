@@ -279,7 +279,7 @@
 
   const dayIo = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      counter.style.opacity = e.isIntersecting ? '1' : '0';
+      counter.classList.toggle('is-visible', e.isIntersecting);
     });
   }, { threshold: 0.05 });
   dayIo.observe(daySection);

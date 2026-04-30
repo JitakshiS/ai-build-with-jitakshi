@@ -461,11 +461,10 @@ section {
 
 /* Sticky scene counter */
 .scene-progress {
-  position: sticky;
+  position: fixed;
   top: 80px;
-  z-index: 10;
-  float: right;
-  margin-right: -8px;
+  right: 28px;
+  z-index: 40;
   display: flex;
   align-items: baseline;
   gap: 4px;
@@ -478,7 +477,13 @@ section {
   padding: 8px 14px;
   border-radius: 100px;
   border: 1px solid rgba(246, 244, 238, 0.1);
-  transition: opacity 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0;
+  pointer-events: none;
+}
+.scene-progress.is-visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 .scene-progress-current {
   font-size: 18px;
@@ -816,9 +821,10 @@ section {
   font-size: 14px; line-height: 1.45;
 }
 .tier-list li::before {
-  content: ""; width: 8px; height: 8px; background: var(--rose); border-radius: 50%;
+  content: ""; width: 8px; height: 8px; min-width: 8px; background: var(--rose); border-radius: 50%;
   margin-top: 7px; flex-shrink: 0;
 }
+.tier-list li strong { display: inline; }
 .tier-card.featured .tier-list li::before {
   background: var(--accent);
 }
