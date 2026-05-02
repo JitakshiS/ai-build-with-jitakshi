@@ -1226,9 +1226,10 @@ section.who {
   align-items: start;
   margin-top: 24px;
 }
-.proof-split .proof-tall img {
-  width: 100%;
-  height: auto;
+.proof-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .proof-stack {
   display: flex;
