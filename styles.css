@@ -1617,6 +1617,8 @@ mark.scroll-hl.is-lit {
 @media (max-width: 980px) {
   .topnav nav { display: none; }
   .topnav .right { display: none; }
+  .topnav { padding: 12px var(--pad-x); background: rgba(10,10,10,0.85); backdrop-filter: blur(10px); mix-blend-mode: normal; }
+  .topnav .brand { font-size: 10px; }
 
   .hero { padding: 70px var(--pad-x) 24px; }
   .hero-meta { flex-direction: column; gap: 8px; }
