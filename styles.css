@@ -1616,12 +1616,71 @@ mark.scroll-hl.is-lit {
 /* ============ RESPONSIVE ============ */
 @media (max-width: 980px) {
   .topnav nav { display: none; }
+  .topnav .right { display: none; }
+
+  .hero { padding: 70px var(--pad-x) 24px; }
+  .hero-meta { flex-direction: column; gap: 8px; }
   .hero-stage { grid-template-columns: 1fr; }
   .hero-onesub { grid-column: 1; grid-row: auto; align-self: start; margin-top: 16px; }
-  .hero-bottom { grid-column: 1; grid-template-columns: 1fr; gap: 32px; }
+  .hero-bottom { grid-column: 1; flex-direction: column; gap: 24px; align-items: flex-start; }
+  .hero-headline { font-size: clamp(36px, 9vw, 64px); }
+  .hero-stat-block .v { font-size: clamp(36px, 8vw, 56px); }
+
   .day-intro, .scene, .scene.flip, .who-grid, .women-grid, .tiers-head { grid-template-columns: 1fr; gap: 32px; }
   .scene.flip .scene-text, .scene.flip .scene-visual { order: initial; }
-  .tier-grid, .proof-grid, .use-grid, .women-stats { grid-template-columns: 1fr; }
-  .marquee-track { font-size: 24px; }
   .scene-visual { aspect-ratio: 4/3; }
+  .scene-h { font-size: clamp(28px, 6vw, 42px); }
+  .scene-quote { flex-direction: column; gap: 4px; }
+
+  .story-cue { padding: 20px 0; margin-bottom: 32px; }
+  .story-cue-text { font-size: 11px; }
+
+  .scene-progress { top: auto; bottom: 28px; right: 16px; }
+
+  .tier-grid, .proof-grid, .use-grid, .women-stats { grid-template-columns: 1fr; }
+  .proof-split { grid-template-columns: 1fr; }
+
+  .h-display { font-size: clamp(32px, 7vw, 56px); }
+  .women-h { font-size: clamp(32px, 7vw, 56px); }
+  .lede { font-size: 17px; }
+
+  .who-name-script { font-size: clamp(48px, 14vw, 100px); margin-bottom: 40px; }
+  .who-side { font-size: 18px; }
+  .who-anno { font-size: 20px; }
+  .who-anno.tl { top: -20px; left: -12px; }
+  .who-anno.tr { top: -24px; right: -12px; }
+  .who-meta-strip { grid-template-columns: 1fr; gap: 24px; text-align: left; }
+  .who-meta-strip .right-col { text-align: left; }
+
+  .events-rail { grid-auto-columns: minmax(260px, 1fr); }
+  .marquee-track { font-size: 24px; }
+
+  .cta-h { font-size: clamp(36px, 9vw, 80px); }
+  .cta-foot { flex-direction: column; gap: 16px; align-items: center; text-align: center; }
+  .cta-foot .links { justify-content: center; }
+
+  .float-cta { right: 16px; bottom: 16px; }
+  .float-cta-btn { padding: 12px 20px; font-size: 11px; }
+
+  .day, .tiers, .women, section.who, .use, .proof, .events { padding: 80px var(--pad-x); }
+  .cta { padding: 100px var(--pad-x); }
+  .logos { padding: 60px var(--pad-x) 48px; }
+}
+
+@media (max-width: 480px) {
+  .hero-headline { font-size: clamp(28px, 8.5vw, 48px); }
+  .hero-eyebrow { font-size: 10px; letter-spacing: 0.12em; padding: 6px 10px; }
+  .hero-onesub { font-size: 16px; }
+  .btn-lg { padding: 16px 24px; font-size: 11px; }
+
+  .tier-card { padding: 28px 20px 20px; }
+  .tier-name { font-size: 36px; }
+
+  .use-tabs { gap: 6px; }
+  .use-tab { padding: 10px 14px; font-size: 11px; }
+
+  .women-stat .num { font-size: clamp(36px, 10vw, 56px); }
+
+  .scene-visual { aspect-ratio: 3/2; }
+  .events-rail { grid-auto-columns: minmax(220px, 1fr); }
 }
