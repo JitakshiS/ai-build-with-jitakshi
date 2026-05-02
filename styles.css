@@ -1223,15 +1223,12 @@ section.who {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+  align-items: start;
   margin-top: 24px;
 }
-.proof-split .proof-tall {
-  align-self: stretch;
-  display: flex;
-}
 .proof-split .proof-tall img {
-  object-fit: cover;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 .proof-stack {
   display: flex;
