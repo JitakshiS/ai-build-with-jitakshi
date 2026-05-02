@@ -1,12 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "has": [{ "type": "host", "value": "labs.creativej.me" }],
-      "destination": "/accelerators.html"
-    },
-    {
-      "source": "/index.html",
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "labs.creativej.me" }],
       "destination": "/accelerators.html"
     }
