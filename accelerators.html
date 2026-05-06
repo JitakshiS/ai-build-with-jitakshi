@@ -335,15 +335,9 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
     <div class="section-label">[ FINAL ] · Let's talk</div>
     <h1 class="cta-h">Bring this to<br/>your <em>community.</em></h1>
     <p class="cta-sub">A quick call to share how the Volta sprint worked, what the experience looks like, and whether it fits your accelerator. Currently expanding to <strong>Toronto</strong> and <strong>Vancouver</strong>.</p>
-    <div class="cal-embed" id="my-cal-inline-30min"></div>
-    <script type="text/javascript">
-      Cal.ns["30min"]("inline", {
-        elementOrSelector:"#my-cal-inline-30min",
-        config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-        calLink: "jitakshi/30min",
-      });
-      Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-    </script>
+    <div class="cta-btn-row">
+      <a class="btn btn-lg" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Book a quick call <span class="arr">→</span></a>
+    </div>
     <div class="cta-foot">
       <div>creativej.me@gmail.com · ATLANTIC CANADA</div>
       <div class="links">
