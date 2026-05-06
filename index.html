@@ -10,6 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <script>if(location.hostname==='labs.creativej.me'){fetch('/accelerators.html').then(r=>r.text()).then(h=>{document.open();document.write(h);document.close();history.replaceState(null,'','/');});}</script>
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "30min", {origin:"https://app.cal.com"});
+</script>
 </head>
 <body>
 
@@ -69,7 +73,7 @@
         <span class="v">100<span class="plus">+</span></span>
         <span class="label">people shipped real software in my rooms</span>
       </div>
-      <a class="btn btn-lg" href="#cta">Book a discovery call <span class="arr">→</span></a>
+      <a class="btn btn-lg" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Book a discovery call <span class="arr">→</span></a>
     </div>
   </div>
   <div class="hero-rule-bot"></div>
@@ -291,7 +295,7 @@
           <li>The AI tool landscape and what's possible now</li>
         </ul>
         <div class="tier-outcome">Outcome: your team sees what's possible – and builds their first thing.</div>
-        <a class="tier-cta" href="#cta">Let's talk →</a>
+        <a class="tier-cta" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Let's talk →</a>
       </div>
 
       <div class="tier-card featured">
@@ -310,7 +314,7 @@
           <li>30-day post-session support</li>
         </ul>
         <div class="tier-outcome">Outcome: your team can build and deploy tools independently.</div>
-        <a class="tier-cta" href="#cta">Let's talk →</a>
+        <a class="tier-cta" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Let's talk →</a>
       </div>
 
       <div class="tier-card">
@@ -329,7 +333,7 @@
           <li>Executive readout on team capabilities</li>
         </ul>
         <div class="tier-outcome">Outcome: production tools shipped – and lasting AI capability in your team.</div>
-        <a class="tier-cta" href="#cta">Let's talk →</a>
+        <a class="tier-cta" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Let's talk →</a>
       </div>
 
     </div>
@@ -519,8 +523,6 @@
     <p class="cta-sub">30 minutes. We figure out the right format, what your people would build, and whether this fits. <mark class="scroll-hl">No pitch – just a conversation.</mark></p>
     <div class="cal-embed" id="my-cal-inline-30min"></div>
     <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", "30min", {origin:"https://app.cal.com"});
       Cal.ns["30min"]("inline", {
         elementOrSelector:"#my-cal-inline-30min",
         config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
@@ -541,7 +543,7 @@
 
 <!-- FLOATING CTA -->
 <div class="float-cta" id="float-cta">
-  <a href="#cta" class="float-cta-btn">Book a call →</a>
+  <a href="#" class="float-cta-btn" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Book a call →</a>
   <a href="#formats" class="float-cta-link">See pricing</a>
 </div>
 
