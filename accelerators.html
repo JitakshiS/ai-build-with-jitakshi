@@ -331,9 +331,16 @@
     <div class="section-label">[ FINAL ] · Let's talk</div>
     <h1 class="cta-h">Bring this to<br/>your <em>community.</em></h1>
     <p class="cta-sub">A quick call to share how the Volta sprint worked, what the experience looks like, and whether it fits your accelerator. Currently expanding to <strong>Toronto</strong> and <strong>Vancouver</strong>.</p>
-    <div class="cta-btn-row">
-      <a class="btn btn-lg" href="https://cal.com/jitakshi/30min" target="_blank" rel="noopener">Book a quick call <span class="arr">→</span></a>
-    </div>
+    <div class="cal-embed" id="cal-inline"></div>
+    <script src="https://app.cal.com/embed/embed.js" async></script>
+    <script>
+      window.addEventListener('load', function() {
+        if (typeof Cal !== 'undefined') {
+          Cal("init");
+          Cal("inline", { elementOrSelector: "#cal-inline", calLink: "jitakshi/30min" });
+        }
+      });
+    </script>
     <div class="cta-foot">
       <div>creativej.me@gmail.com · ATLANTIC CANADA</div>
       <div class="links">

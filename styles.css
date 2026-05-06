@@ -1374,7 +1374,17 @@ section.who {
   color: var(--dim); text-transform: uppercase;
   text-align: center; margin-bottom: 48px;
 }
-.logos img { max-width: 100%; width: 100%; height: auto; opacity: 0.9; display: block; margin: 0 auto; }
+.logos img { max-width: 100%; width: 100%; height: auto; opacity: 0.9; display: block; margin: 0 auto; mix-blend-mode: multiply; }
+
+/* Cal.com inline embed */
+.cal-embed {
+  width: 100%;
+  min-height: 450px;
+  margin-top: 32px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
 
 /* ============ TWEAKS PANEL OVERRIDES ============ */
 [data-accent="rose"] {
