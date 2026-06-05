@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Build with AI – Jitakshi Sharma</title>
+<meta name="description" content="Hands-on AI cohorts for corporate teams. Your team won't just learn about AI – they'll ship working tools by the end of the session." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "30min", {origin:"https://app.cal.com"});
+</script>
+<style>
+  /* ---- v2-only: Who this is for ---- */
+  .whofor { background: var(--paper-warm); padding: 100px var(--pad-x); }
+  .whofor .wrap { max-width: var(--max); margin: 0 auto; }
+  .whofor-head { max-width: 760px; margin-bottom: 40px; }
+  .whofor h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(34px, 4.5vw, 60px); line-height: 1.04; letter-spacing: -0.02em; margin: 16px 0 0; }
+  .whofor h2 em { font-style: italic; color: var(--rose); }
+  .whofor-sub { font-size: 18px; line-height: 1.5; color: var(--dim2); max-width: 640px; margin-top: 24px; }
+  .whofor-pills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+  .whofor-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 22px; border-radius: 100px;
+    background: var(--paper); border: 1px solid var(--rule);
+    font-family: var(--f-mono); font-size: 13px; letter-spacing: 0.04em;
+    color: var(--ink); transition: transform .25s, border-color .25s;
+  }
+  .whofor-pill:hover { transform: translateY(-2px); border-color: var(--ink); }
+  .whofor-pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--rose); }
+
+  /* ---- v2-only: pricing card emphasis on team size ---- */
+  .tier-people { font-family: var(--f-display); font-size: clamp(40px, 4vw, 52px); line-height: 1; letter-spacing: -0.02em; font-weight: 400; margin: 4px 0 0; }
+  .tier-people .ppl { font-size: 0.42em; color: var(--dim); letter-spacing: 0.04em; display: block; margin-top: 8px; font-family: var(--f-mono); text-transform: uppercase; }
+  .tier-card.featured .tier-people .ppl { color: rgba(246,244,238,0.6); }
+  .tier-format { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--dim); margin-top: 4px; }
+  .tier-card.featured .tier-format { color: rgba(246,244,238,0.55); }
+</style>
+</head>
+<body>
+
+<canvas id="ambient"></canvas>
+
+<!-- TOP NAV -->
+<header class="topnav">
+  <div class="brand"><span class="pulse"></span>JITAKSHI / BUILD-WITH-AI</div>
+  <nav>
+    <a href="#whofor">[01] Who it's for</a>
+    <a href="#formats">[02] Formats</a>
+    <a href="#proof">[03] Proof</a>
+    <a href="#use">[04] Use cases</a>
+    <a href="#cta">[05] Contact</a>
+  </nav>
+  <div class="right">
+    <span id="nav-time">--:--:-- UTC</span>
+    <span>· HALIFAX, NS</span>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-rule-top"></div>
+  <div class="hero-meta">
+    <div>// VOL.05 / BUILD-WITH-AI · CORPORATE-COHORTS</div>
+    <div class="live">LIVE – TAKING Q2 & Q3 BOOKINGS</div>
+  </div>
+
+  <div class="hero-stage">
+    <div class="hero-eyebrow"><span class="dot"></span> HANDS-ON AI FOR CORPORATE TEAMS</div>
+
+    <h1 class="hero-headline" id="hero-h">
+      <span class="row"><span class="word" style="animation-delay:.1s">Your</span>&nbsp;<span class="word" style="animation-delay:.2s">team</span>&nbsp;<span class="word" style="animation-delay:.3s">did</span></span>
+      <span class="row"><span class="word" style="animation-delay:.4s">the</span>&nbsp;<span class="word" style="animation-delay:.5s"><em>AI training.</em></span></span>
+      <span class="row"><span class="word strike" style="animation-delay:.7s">Nothing&nbsp;changed</span></span>
+      <span class="row"><span class="word" style="animation-delay:.9s">on&nbsp;Monday.</span></span>
+    </h1>
+
+    <p class="hero-onesub">
+      I run hands-on cohorts where your team <strong>builds and ships working tools</strong> – by the end of the session. Priced by how many people you bring.
+    </p>
+
+    <div class="hero-bottom">
+      <div class="hero-stat-block">
+        <span class="v">100<span class="plus">+</span></span>
+        <span class="label">people shipped real software in my rooms</span>
+      </div>
+      <a class="btn btn-lg" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Book a discovery call <span class="arr">→</span></a>
+    </div>
+  </div>
+  <div class="hero-rule-bot"></div>
+  <div class="scroll-cue">See who this is for</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Build with AI</span><span class="dot"></span>
+    <span class="ghost">Not just learn about it</span><span class="dot"></span>
+    <span>Ship in the session</span><span class="dot"></span>
+    <span class="ghost">Not next quarter</span><span class="dot"></span>
+    <span>Build with AI</span><span class="dot"></span>
+    <span class="ghost">Not just learn about it</span><span class="dot"></span>
+    <span>Ship in the session</span><span class="dot"></span>
+    <span class="ghost">Not next quarter</span><span class="dot"></span>
+    <span>Build with AI</span><span class="dot"></span>
+    <span class="ghost">Not just learn about it</span><span class="dot"></span>
+  </div>
+</div>
+
+<!-- ============ WHO THIS IS FOR ============ -->
+<section class="whofor" id="whofor">
+  <div class="wrap">
+    <div class="whofor-head" data-reveal>
+      <div class="section-label">[ 01 / 05 ] · Who this is for</div>
+      <h2>For teams expected to "use AI more" – <em>with no real plan for how.</em></h2>
+      <p class="whofor-sub">If your people have sat through AI talks and demos but still aren't building anything, this is the room that changes that. It works for any department, technical or not.</p>
+    </div>
+    <div class="whofor-pills" data-reveal>
+      <span class="whofor-pill">L&amp;D &amp; Training</span>
+      <span class="whofor-pill">People &amp; HR</span>
+      <span class="whofor-pill">Operations</span>
+      <span class="whofor-pill">Marketing</span>
+      <span class="whofor-pill">Finance</span>
+      <span class="whofor-pill">Design &amp; Research</span>
+      <span class="whofor-pill">Innovation &amp; Strategy</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMATS / PRICING (by team size) ============ -->
+<section class="tiers" id="formats">
+  <div class="wrap">
+    <div class="tiers-head" data-reveal>
+      <div>
+        <div class="section-label">[ 02 / 05 ] · Formats &amp; pricing</div>
+        <h2 class="h-display">Priced by <em>your team.</em></h2>
+      </div>
+      <p class="lede">Tell me how many people you want in the room. Pricing follows the headcount – and the bigger the group, the lighter the touch; the smaller the group, the deeper the build.</p>
+    </div>
+
+    <div class="tier-grid">
+
+      <div class="tier-card">
+        <div class="tier-tag">KICKOFF</div>
+        <h3 class="tier-people">Up to 40<span class="ppl">people</span></h3>
+        <div class="tier-price"><span>$2,500</span> <span class="from">CAD</span></div>
+        <div class="tier-format">Half-day · 2 hours</div>
+        <p class="tier-best">Best for: introducing AI to a whole department or team offsite – everyone builds their first thing.</p>
+        <div class="tier-list-label">What your team walks away with</div>
+        <ul class="tier-list">
+          <li>A working prototype built with <strong>Lovable</strong></li>
+          <li>A live demo: an app built in real time</li>
+          <li>A clear picture of what AI can do for their role</li>
+        </ul>
+        <a class="tier-cta" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Let's talk →</a>
+      </div>
+
+      <div class="tier-card featured">
+        <div class="tier-tag-mp">MOST POPULAR</div>
+        <div class="tier-tag">INTENSIVE</div>
+        <h3 class="tier-people">Up to 25<span class="ppl">people</span></h3>
+        <div class="tier-price"><span>$8,000</span> <span class="from">CAD</span></div>
+        <div class="tier-format">Full day</div>
+        <p class="tier-best">Best for: upskilling a core team so they stop waiting on the dev queue and start building for themselves.</p>
+        <div class="tier-list-label">What your team walks away with</div>
+        <ul class="tier-list">
+          <li>Rapid prototyping with <strong>Lovable</strong></li>
+          <li>Building with AI in the terminal via <strong>Claude Code</strong></li>
+          <li>Each person builds and deploys a working tool</li>
+          <li>30-day post-session support</li>
+        </ul>
+        <a class="tier-cta" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Let's talk →</a>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-tag">CAPABILITY SPRINT</div>
+        <h3 class="tier-people">Up to 15<span class="ppl">people</span></h3>
+        <div class="tier-price"><span>$35,000</span> <span class="from">CAD</span></div>
+        <div class="tier-format">4 weeks · weekly sessions</div>
+        <p class="tier-best">Best for: building real internal tools and lasting in-house AI capability that outlives the engagement.</p>
+        <div class="tier-list-label">What your team walks away with</div>
+        <ul class="tier-list">
+          <li><strong>Lovable, Claude Code, and AI agents</strong></li>
+          <li>Tools built for real business use cases</li>
+          <li>1:1 support, code reviews, production deployment</li>
+          <li>An executive readout on team capability</li>
+        </ul>
+        <a class="tier-cta" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Let's talk →</a>
+      </div>
+
+    </div>
+    <div class="tier-foot" style="margin-top:40px;text-align:center;font-family:var(--f-mono);font-size:12px;letter-spacing:0.06em;color:var(--dim);">Larger teams or a custom format? <a href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">Let's scope it →</a></div>
+  </div>
+</section>
+
+<!-- ============ PROOF ============ -->
+<section class="proof" id="proof">
+  <div class="wrap">
+    <div data-reveal>
+      <div class="section-label">[ 03 / 05 ] · Proof</div>
+      <h2 class="h-display">Don't take my word.<br/><em>Take theirs.</em></h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card"><img src="images/li-3.png" alt="Yuhan Fu testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/li-4.png" alt="Primrose testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/li-1.png" alt="Natalie Mannion (Shopify) testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/li-2.png" alt="Thauana Morais testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/linkedin-caroline-vercel.png" alt="Caroline (Vercel) testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/linkedin-govind-talluri.png" alt="Govind Talluri testimonial on LinkedIn" /></div>
+    </div>
+    <div class="proof-foot"><a href="https://www.linkedin.com/in/jitakshi/" target="_blank" rel="noopener">See the full post ↗</a></div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos">
+  <div class="lab">8 YEARS · WITH THESE FOLKS</div>
+  <img src="images/company-logos-dark.png" alt="Trusted partners" />
+</section>
+
+<!-- ============ USE CASES ============ -->
+<section class="use" id="use">
+  <div class="wrap">
+    <div class="use-head" data-reveal>
+      <div class="section-label">[ 04 / 05 ] · What your team builds</div>
+      <h2 class="h-display">For everyone – <span class="lime">not just engineers.</span></h2>
+      <p class="lede" style="color: rgba(246,244,238,0.7); margin-top: 28px;">Real tools your team will actually build. Pick a department.</p>
+    </div>
+
+    <div class="use-tabs">
+      <button class="use-tab active" data-dept="HR">HR & People</button>
+      <button class="use-tab" data-dept="Finance">Finance</button>
+      <button class="use-tab" data-dept="Design">Design & Research</button>
+      <button class="use-tab" data-dept="Marketing">Marketing</button>
+      <button class="use-tab" data-dept="Operations">Operations</button>
+    </div>
+
+    <div class="use-grid" id="use-grid"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee rose">
+  <div class="marquee-track">
+    <span>Workshops you forget</span><span class="dot"></span>
+    <span class="ghost">→ Cultures you keep</span><span class="dot"></span>
+    <span>Workshops you forget</span><span class="dot"></span>
+    <span class="ghost">→ Cultures you keep</span><span class="dot"></span>
+    <span>Workshops you forget</span><span class="dot"></span>
+    <span class="ghost">→ Cultures you keep</span><span class="dot"></span>
+    <span>Workshops you forget</span><span class="dot"></span>
+    <span class="ghost">→ Cultures you keep</span><span class="dot"></span>
+  </div>
+</div>
+
+<!-- ============ DAY IN THE LIFE (story – moved down as conviction) ============ -->
+<section class="day" id="journey">
+  <div class="wrap">
+    <div class="story-cue" data-reveal>
+      <div class="story-cue-line"></div>
+      <span class="story-cue-text">What a session actually feels like – follow Maya, 4 scenes, 5 days</span>
+      <div class="story-cue-line"></div>
+    </div>
+
+    <div class="day-intro" data-reveal>
+      <div>
+        <div class="section-label">A Day In The Life</div>
+        <h2 class="h-display">Meet Maya.<br/>She's in <em>HR</em>.<br/>She's never written code.</h2>
+      </div>
+      <p class="lede">Monday, she's anxious about AI. Friday, she's <mark class="scroll-hl">demoing a tool she built</mark> – that her team uses on Monday. This is what one of my sessions feels like, scene by scene.</p>
+    </div>
+
+    <div class="scene-progress" id="scene-progress">
+      <span class="scene-progress-current">01</span>
+      <span class="scene-progress-sep">/</span>
+      <span class="scene-progress-total">04</span>
+    </div>
+
+    <article class="scene">
+      <div class="scene-text">
+        <div class="scene-num">SCENE 01 <span class="time">// MON 09:14</span></div>
+        <h3 class="scene-h">Blank doc. Cursor blinking. <em>Dread.</em></h3>
+        <p class="scene-p">Her org sent the all-hands AI memo. Everyone's supposed to "use AI more." She's tried ChatGPT for emails. That's it. The slide deck calls it <em>AI fluency</em>. She has <mark class="scroll-hl">no idea what she's supposed to do with it.</mark></p>
+        <div class="scene-quote">
+          "I felt like the youngest person in a room I wasn't invited to. AI was for engineers. Not for me."
+          <span class="who">– A real participant, before her first session</span>
+        </div>
+      </div>
+      <div class="scene-visual">
+        <div class="scene-blank">
+          <div class="anxiety">ANXIETY · HIGH</div>
+          <div class="doc">
+            <div class="doc-ttl">Untitled – How am I supposed to use AI?</div>
+            <span class="doc-cursor"></span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="scene flip">
+      <div class="scene-text">
+        <div class="scene-num">SCENE 02 <span class="time">// MON 13:30 · session begins</span></div>
+        <h3 class="scene-h">She types one sentence. <em>Lovable</em> builds the app.</h3>
+        <p class="scene-p">In the first hour, every participant picks a real problem from their job. Then they describe it – in plain English – to Lovable. <mark class="scroll-hl">A working web app appears.</mark> No tutorial. No syntax. Just the thing they wanted.</p>
+        <div class="scene-quote">
+          "I built a vacation request tracker in 11 minutes. We've been promising IT we'd fix it for 18 months."
+          <span class="who">– Maya, end of day 1</span>
+        </div>
+      </div>
+      <div class="scene-visual">
+        <div class="fake-window lovable">
+          <div class="titlebar">
+            <span class="tdot"></span><span class="tdot"></span><span class="tdot"></span>
+            <span class="url"><span class="host">lovable.dev</span> / new-project</span>
+          </div>
+          <div class="body">
+            <div class="prompt">
+              <div class="label">// PROMPT</div>
+              <div class="typed"></div>
+            </div>
+            <div class="preview">
+              <div class="skel t"></div>
+              <div class="skel"></div>
+              <div class="skel s"></div>
+              <div class="skel"></div>
+              <div class="skel s"></div>
+              <div class="skel btn-fake">Submit →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="scene">
+      <div class="scene-text">
+        <div class="scene-num">SCENE 03 <span class="time">// TUE 10:00 · day two</span></div>
+        <h3 class="scene-h">She opens a <em>terminal</em> for the first time. And it talks back.</h3>
+        <p class="scene-p">Day two is Claude Code. Sounds intimidating – but she's just having a conversation. She asks it to add email notifications. It writes the code, explains what it did, and <mark class="scroll-hl">asks if she wants it to deploy.</mark></p>
+        <div class="scene-quote">
+          "I'm not pretending I'm an engineer. I'm directing one. Claude is the engineer."
+          <span class="who">– Real session feedback</span>
+        </div>
+      </div>
+      <div class="scene-visual">
+        <div class="terminal">
+          <span class="line"><span class="pr">$</span> claude</span>
+          <span class="line"><span class="cmt"># ⏵ Welcome back, Maya. What are we building?</span></span>
+          <span class="line">&gt; add email notifications when a request is approved</span>
+          <span class="line"><span class="cmt"># reading src/handlers/approve.ts...</span></span>
+          <span class="line"><span class="cmt"># adding sendmail integration via resend</span></span>
+          <span class="line"><span class="cmt"># writing tests/approve.test.ts</span></span>
+          <span class="line"><span class="ok">✓</span> 3 files changed · 47 lines added</span>
+          <span class="line"><span class="info">→</span> ready to deploy. continue? (y/n)</span>
+          <span class="line">&gt; y</span>
+          <span class="line"><span class="ok">✓</span> deployed to vercel · <span class="info">vacation-tracker.acme.app</span></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="scene flip">
+      <div class="scene-text">
+        <div class="scene-num">SCENE 04 <span class="time">// FRI 16:00 · demo day</span></div>
+        <h3 class="scene-h">She <em>demos</em>. Out loud. To her team.</h3>
+        <p class="scene-p">The session ends with demos – because saying it out loud is what makes the skill stick. Maya walks her team through a tool that's already in production. <mark class="scroll-hl">Three colleagues ask if they can join the next cohort.</mark> That's how culture changes.</p>
+        <div class="scene-quote">
+          "This wasn't training. This was Maya showing us what's possible. Suddenly everyone wanted to try."
+          <span class="who">– Her director, Monday after</span>
+        </div>
+      </div>
+      <div class="scene-visual">
+        <div class="deploy">
+          <div class="row"><span class="check">✓</span><span class="name">Built tool</span><span class="url">vacation-tracker.acme.app</span></div>
+          <div class="row"><span class="check pending">○</span><span class="name">Deployed to production</span><span class="url">via Vercel</span></div>
+          <div class="row"><span class="check pending">○</span><span class="name">Onboarded team</span><span class="url">3 active users</span></div>
+          <div class="row"><span class="check pending">○</span><span class="name">Demo recorded</span><span class="url">shared internally</span></div>
+          <div class="demo-card">
+            "I built this. Want me to show you?"
+            <div class="sub">– Maya, Friday 4:12pm</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ WOMEN-LED ============ -->
+<section class="women" id="women">
+  <div class="wrap">
+    <div class="women-grid">
+      <div data-reveal>
+        <div class="section-label">The Differentiator</div>
+        <h2 class="women-h">Women build louder<br/>in <span class="underline">all-women rooms.</span></h2>
+        <p class="women-lede">When the room is all-women, the women build. They ask questions out loud. They demo without apologizing. They pitch the messy ideas. I've run mixed rooms and women-only rooms – <mark class="scroll-hl">the difference isn't subtle.</mark> <strong>It's the entire reason I started doing this work.</strong></p>
+        <p class="women-lede" style="margin-top: 16px;">If your company is serious about women in AI, the path isn't another panel. It's a private cohort where they ship something real.</p>
+      </div>
+      <div class="women-photo">
+        <img src="images/volta-sprint-cohort.jpeg" alt="Volta Sprint Cohort" />
+        <div class="corner">COHORT 001<br/>VOLTA · 2025</div>
+      </div>
+    </div>
+
+    <div class="women-stats">
+      <div class="women-stat">
+        <div class="num">100+</div>
+        <div class="label">PEOPLE SHIPPED REAL SOFTWARE</div>
+      </div>
+      <div class="women-stat">
+        <div class="num">10</div>
+        <div class="label">SPRINT GRADUATES · ZERO CODE BACKGROUND</div>
+      </div>
+      <div class="women-stat">
+        <div class="num">100%</div>
+        <div class="label">DEPLOYED A WORKING APP</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO (Jitakshi) ============ -->
+<section class="who">
+  <div class="wrap">
+    <div class="section-label" style="justify-content: center; margin-bottom: 24px;">Who's running the room</div>
+    <h2 class="who-name-script">
+      <span class="tick-l">≋</span>Jitakshi<span class="tick-r">≋</span>
+    </h2>
+
+    <div class="who-grid">
+      <div class="who-side left">
+        <div class="who-anno tl">credentials</div>
+        <p><strong>Anthropic</strong> Claude Ambassador<br/>– Atlantic Canada</p>
+        <p style="margin-top:24px;"><strong>100+</strong> people<br/>shipped real software<br/>in my rooms</p>
+        <p style="margin-top:24px;"><strong>Previously:</strong><br/>Google · Meta · Netflix · Audi</p>
+      </div>
+
+      <div class="who-portrait" data-reveal>
+        <span class="tape"></span>
+        <img src="images/headshot.jpeg" alt="Jitakshi Sharma" />
+        <div class="id-hand">– Jitakshi –</div>
+      </div>
+
+      <div class="who-side right">
+        <div class="who-anno tr">what I actually do</div>
+        <p>I don't run<br/>workshops.</p>
+        <p style="margin-top:18px;">I build <strong>cultures</strong><br/>where your team<br/>keeps building<br/>after I leave.</p>
+        <p style="margin-top:24px; font-size:18px;">– that's the difference –</p>
+      </div>
+    </div>
+
+    <div class="who-meta-strip">
+      <div>
+        <span class="label">Partners</span>
+        <div class="v">Shopify · YWCA · Lovable · Volta · v0 · Claude Code</div>
+      </div>
+      <div style="text-align:center;">
+        <span class="label">Recent</span>
+        <div class="v"><em>Volta AI Sprint</em> – 10 women · 4 weeks · 10 deployed apps</div>
+      </div>
+      <div class="right-col">
+        <span class="label">Find me</span>
+        <div class="v">linkedin.com/in/<em>jitakshi</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="cta">
+  <div class="wrap">
+    <div class="section-label">[ FINAL ] · Contact</div>
+    <h1 class="cta-h">Let's talk about<br/>your <em>team.</em></h1>
+    <p class="cta-sub">30 minutes. We figure out how many people, the right format, and what your team would build. <mark class="scroll-hl">No pitch – just a conversation.</mark></p>
+    <div class="cta-btn-row">
+      <a class="btn btn-lg" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Book a discovery call <span class="arr">→</span></a>
+    </div>
+    <div class="cta-foot">
+      <div>creativej.me@gmail.com · ATLANTIC CANADA</div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/jitakshi/" target="_blank" rel="noopener">LINKEDIN ↗</a>
+        <a href="https://women-in-ai-jitakshi.vercel.app/" target="_blank" rel="noopener">COMMUNITY ↗</a>
+        <a href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">BOOK A CALL →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOATING CTA -->
+<div class="float-cta" id="float-cta">
+  <a href="#" class="float-cta-btn" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Book a call →</a>
+  <a href="#formats" class="float-cta-link">See pricing</a>
+</div>
+
+</main>
+
+<script>
+  // Trigger hero word-rise animation
+  var heroH = document.getElementById('hero-h');
+  if (heroH) {
+    heroH.classList.remove('animate');
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ heroH.classList.add('animate'); }); });
+    setTimeout(function(){ heroH.querySelectorAll('.word').forEach(function(w){ w.style.transform = 'translateY(0)'; }); }, 2500);
+  }
+</script>
+
+<script>document.addEventListener('contextmenu',e=>e.preventDefault());</script>
+<script src="app.js"></script>
+
+</body>
+</html>
