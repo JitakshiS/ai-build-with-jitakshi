@@ -24,7 +24,7 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
   .whofor h2 em { font-style: italic; color: var(--rose); }
   .whofor-sub { font-size: 19px; line-height: 1.55; color: rgba(246,244,238,0.72); max-width: 660px; margin-top: 28px; }
   .whofor-label { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
-  .whofor-pills { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
+  .whofor-pills { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; max-width: 880px; }
   .whofor-pill {
     display: inline-flex; align-items: center; gap: 12px;
     padding: 18px 28px; border-radius: 100px;
@@ -34,6 +34,12 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
   }
   .whofor-pill:hover { transform: translateY(-3px); background: var(--accent); border-color: var(--accent); }
   .whofor-pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--rose); }
+
+  /* ---- v2-only: use-case cards readability ---- */
+  .use-grid { min-height: 0; }
+  .use-card .desc { font-size: 15px; line-height: 1.55; color: rgba(246,244,238,0.82); margin-top: 16px; }
+  .use-card .built { font-size: 24px; }
+  .use-card .stack { margin-top: auto; padding-top: 16px; }
 
   /* ---- v2-only: proof dark for contrast ---- */
   section.proof { background: var(--ink); color: var(--paper); }
