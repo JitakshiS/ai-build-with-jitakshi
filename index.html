@@ -81,6 +81,10 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
     .faq { padding: 80px var(--pad-x); }
     .faq-grid { grid-template-columns: 1fr; gap: 28px; }
     .hero-trust { font-size: 11px; }
+    .logos-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 calc(-1 * var(--pad-x)); padding: 0 var(--pad-x); }
+    .logos-scroll::-webkit-scrollbar { height: 4px; }
+    .logos-scroll::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 2px; }
+    section.logos img { min-width: 720px; }
   }
 </style>
 </head>
@@ -143,7 +147,7 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
 <!-- LOGOS (authority strip) -->
 <section class="logos">
   <div class="lab">TRUSTED BY · 8 YEARS WITH THESE FOLKS</div>
-  <img src="images/company-logos-dark.png" alt="Shopify, YWCA, Lovable, Vercel and other partners" />
+  <div class="logos-scroll"><img src="images/company-logos-dark.png" alt="Shopify, YWCA, Lovable, Vercel and other partners" /></div>
 </section>
 
 <!-- ============ WHO THIS IS FOR ============ -->
