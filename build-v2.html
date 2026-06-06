@@ -35,11 +35,23 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
   .whofor-pill:hover { transform: translateY(-3px); background: var(--accent); border-color: var(--accent); }
   .whofor-pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--rose); }
 
+  /* ---- v2-only: hero trust line ---- */
+  .hero-trust { margin-top: 28px; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.04em; color: var(--dim); }
+  .hero-trust strong { color: var(--ink); font-weight: 600; }
+
   /* ---- v2-only: use-case cards readability ---- */
   .use-grid { min-height: 0; }
   .use-card .desc { font-size: 15px; line-height: 1.55; color: rgba(246,244,238,0.82); margin-top: 16px; }
   .use-card .built { font-size: 24px; }
   .use-card .stack { margin-top: auto; padding-top: 16px; }
+
+  /* ---- v2-only: FAQ ---- */
+  .faq { background: var(--paper-warm); padding: 120px var(--pad-x); }
+  .faq .wrap { max-width: var(--max); margin: 0 auto; }
+  .faq .h-display { margin-bottom: 56px; }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 64px; }
+  .faq-q { font-family: var(--f-display); font-size: 23px; line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 12px; }
+  .faq-a { font-size: 16px; line-height: 1.6; color: var(--dim2); }
 
   /* ---- v2-only: proof dark for contrast ---- */
   section.proof { background: var(--ink); color: var(--paper); }
@@ -55,6 +67,16 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
   .tier-card.featured .tier-people .ppl { color: rgba(246,244,238,0.6); }
   .tier-format { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--dim); margin-top: 4px; }
   .tier-card.featured .tier-format { color: rgba(246,244,238,0.55); }
+
+  /* ---- v2-only: mobile ---- */
+  @media (max-width: 980px) {
+    .whofor { padding: 80px var(--pad-x); }
+    .whofor-pills { max-width: 100%; }
+    .whofor-pill { padding: 14px 20px; font-size: 13px; }
+    .faq { padding: 80px var(--pad-x); }
+    .faq-grid { grid-template-columns: 1fr; gap: 28px; }
+    .hero-trust { font-size: 11px; }
+  }
 </style>
 </head>
 <body>
@@ -88,7 +110,7 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
   </div>
 
   <div class="hero-stage">
-    <div class="hero-eyebrow"><span class="dot"></span> HANDS-ON AI FOR CORPORATE TEAMS</div>
+    <div class="hero-eyebrow"><span class="dot"></span> ANTHROPIC CLAUDE AMBASSADOR · WOMEN-LED AI BUILDING</div>
 
     <h1 class="hero-headline" id="hero-h">
       <span class="row"><span class="word" style="animation-delay:.1s">Your</span>&nbsp;<span class="word" style="animation-delay:.2s">team</span>&nbsp;<span class="word" style="animation-delay:.3s">did</span></span>
@@ -98,7 +120,7 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
     </h1>
 
     <p class="hero-onesub">
-      I run hands-on cohorts where your team <strong>builds and ships working tools</strong> – by the end of the session. Priced by how many people you bring.
+      I run hands-on AI cohorts for <strong>the women on your team</strong> – where they build and ship real working tools by the end of the session. Priced by how many people you bring. Mixed teams welcome too.
     </p>
 
     <div class="hero-bottom">
@@ -108,6 +130,7 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
       </div>
       <a class="btn btn-lg" href="#" onclick="Cal.ns['30min']('modal',{calLink:'jitakshi/30min'});return false;">Book a discovery call <span class="arr">→</span></a>
     </div>
+    <div class="hero-trust">Worked with <strong>Shopify · YWCA · Lovable · Vercel</strong> · Previously Google, Meta, Netflix</div>
   </div>
   <div class="hero-rule-bot"></div>
   <div class="scroll-cue">See who this is for</div>
@@ -118,8 +141,8 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
   <div class="wrap">
     <div class="whofor-head" data-reveal>
       <div class="section-label">[ 01 / 05 ] · Who this is for</div>
-      <h2>For teams expected to "use AI more" – <em>with no real plan for how.</em></h2>
-      <p class="whofor-sub">If your people have sat through AI talks and demos but still aren't building anything, this is the room that changes that. It works for any department, technical or not.</p>
+      <h2>For the women on your team expected to "use AI more" – <em>with no real plan for how.</em></h2>
+      <p class="whofor-sub">Whether it's your whole women's network or a few women in one department, this is the room where they stop sitting through AI talks and start building real tools. Works for any role, technical or not – and we run mixed whole-team cohorts too.</p>
     </div>
     <div data-reveal>
       <div class="whofor-label">Built for these teams</div>
@@ -224,14 +247,15 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
     <div data-reveal>
       <div class="section-label">[ 03 / 05 ] · Proof</div>
       <h2 class="h-display">Don't take my word.<br/><em>Take theirs.</em></h2>
+      <p class="lede" style="color: rgba(246,244,238,0.75); margin-top: 24px;">In my last women's sprint: <strong style="color:var(--paper)">10 women, zero coding background, 100% shipped a working app.</strong></p>
     </div>
     <div class="proof-grid">
-      <div class="proof-card"><img src="images/li-3.png" alt="Yuhan Fu testimonial on LinkedIn" /></div>
-      <div class="proof-card"><img src="images/li-4.png" alt="Primrose testimonial on LinkedIn" /></div>
       <div class="proof-card"><img src="images/li-1.png" alt="Natalie Mannion (Shopify) testimonial on LinkedIn" /></div>
-      <div class="proof-card"><img src="images/li-2.png" alt="Thauana Morais testimonial on LinkedIn" /></div>
       <div class="proof-card"><img src="images/linkedin-caroline-vercel.png" alt="Caroline (Vercel) testimonial on LinkedIn" /></div>
       <div class="proof-card"><img src="images/linkedin-govind-talluri.png" alt="Govind Talluri testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/li-3.png" alt="Yuhan Fu testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/li-4.png" alt="Primrose testimonial on LinkedIn" /></div>
+      <div class="proof-card"><img src="images/li-2.png" alt="Thauana Morais testimonial on LinkedIn" /></div>
     </div>
     <div class="proof-foot"><a href="https://www.linkedin.com/in/jitakshi/" target="_blank" rel="noopener">See the full post ↗</a></div>
   </div>
@@ -483,6 +507,42 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
       <div class="right-col">
         <span class="label">Find me</span>
         <div class="v">linkedin.com/in/<em>jitakshi</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="wrap">
+    <div data-reveal>
+      <div class="section-label">[ 05 / 05 ] · The practical stuff</div>
+      <h2 class="h-display">Questions you're<br/>probably asking.</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">How is this different from an online AI course?</div>
+        <div class="faq-a">Courses teach concepts and hope they stick. Here, every person builds and ships a real tool tied to their actual job, with me in the room. They leave with something working, not a certificate.</div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">Do participants need any coding background?</div>
+        <div class="faq-a">None. Most of the women I've worked with had never written a line of code and shipped a working app by the end. The tools do the building; your team directs them in plain English.</div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">In person or remote?</div>
+        <div class="faq-a">Both. I run sessions on-site across Atlantic Canada and remotely for teams anywhere. We'll pick whatever fits your group on the call.</div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">Is this only for women?</div>
+        <div class="faq-a">Women-only cohorts are my focus, because the results in those rooms are different. But I also run mixed whole-team sessions when that's what you need.</div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">What does my team walk away with?</div>
+        <div class="faq-a">A working tool each, the confidence to keep building, and a shared language for AI across the team. For longer formats, tools deployed to production and an executive readout.</div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">How do we start?</div>
+        <div class="faq-a">A 30-minute call. We figure out how many people, the right format, and what your team would build. No pitch, just a conversation.</div>
       </div>
     </div>
   </div>
