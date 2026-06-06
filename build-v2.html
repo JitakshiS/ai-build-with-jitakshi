@@ -35,6 +35,10 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
   .whofor-pill:hover { transform: translateY(-3px); background: var(--accent); border-color: var(--accent); }
   .whofor-pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--rose); }
 
+  /* ---- v2-only: logo strip blends with its own background ---- */
+  section.logos { background: rgb(250,250,250); border-bottom: none; }
+  section.logos img { mix-blend-mode: normal; }
+
   /* ---- v2-only: hero trust line ---- */
   .hero-trust { margin-top: 28px; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.04em; color: var(--dim); }
   .hero-trust strong { color: var(--ink); font-weight: 600; }
