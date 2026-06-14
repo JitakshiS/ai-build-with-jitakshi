@@ -85,8 +85,8 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
   .tier-people { font-family: var(--f-display); font-size: clamp(40px, 4vw, 52px); line-height: 1; letter-spacing: -0.02em; font-weight: 400; margin: 4px 0 0; }
   .tier-people .ppl { font-size: 0.42em; color: var(--dim); letter-spacing: 0.04em; display: block; margin-top: 8px; font-family: var(--f-mono); text-transform: uppercase; }
   .tier-card.featured .tier-people .ppl { color: rgba(246,244,238,0.6); }
-  .tier-format { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--dim); margin-top: 4px; }
-  .tier-card.featured .tier-format { color: rgba(246,244,238,0.55); }
+  .tier-format { display: inline-block; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: rgba(10,10,10,0.06); padding: 6px 12px; border-radius: 100px; margin-top: 10px; font-weight: 600; }
+  .tier-card.featured .tier-format { color: var(--paper); background: rgba(246,244,238,0.16); }
 
   /* ---- v2-only: mobile ---- */
   @media (max-width: 980px) {
@@ -221,7 +221,7 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
         <div class="tier-tag">KICKOFF</div>
         <h3 class="tier-people">Up to 40<span class="ppl">people</span></h3>
         <div class="tier-price"><span>$2,500</span> <span class="from">CAD</span></div>
-        <div class="tier-format">Half-day · 2 hours</div>
+        <div class="tier-format">2 hours</div>
         <p class="tier-best">Best for: introducing AI to a whole department or team offsite – everyone builds their first thing.</p>
         <div class="tier-list-label">What your team walks away with</div>
         <ul class="tier-list">
@@ -237,7 +237,7 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
         <div class="tier-tag">INTENSIVE</div>
         <h3 class="tier-people">Up to 25<span class="ppl">people</span></h3>
         <div class="tier-price"><span>$4,500</span> <span class="from">CAD</span></div>
-        <div class="tier-format">Full day</div>
+        <div class="tier-format">6 hours</div>
         <p class="tier-best">Best for: upskilling a core team so they stop waiting on the dev queue and start building for themselves.</p>
         <div class="tier-list-label">What your team walks away with</div>
         <ul class="tier-list">
